@@ -1,0 +1,119 @@
+/* =====================================================================
+   GLOBAL RESET + BASE
+   ===================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth font */
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 
+               "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, 
+               "Open Sans", "Helvetica Neue", sans-serif;
+  background: #f5f6f8;
+  color: #222;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove button default styling */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+/* Smooth hover */
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* Input + select unified style */
+input, select, textarea {
+  outline: none;
+  font-family: inherit;
+  transition: border 0.15s ease;
+}
+
+/* =====================================================================
+   DARK MODE
+   (Triggered by body.dark)
+   ===================================================================== */
+
+body.dark {
+  background: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background: #2b2b2b;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark button {
+  color: #fff;
+}
+
+body.dark .card,
+body.dark table,
+body.dark .modal-box {
+  background: #2b2b2b;
+  color: #fff;
+  border-color: #444;
+}
+
+/* =====================================================================
+   UI UTILITIES
+   ===================================================================== */
+
+/* Shadows */
+.shadow-sm {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.shadow-md {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+}
+
+/* Card base */
+.card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Centering helper */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
